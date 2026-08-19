@@ -25,6 +25,9 @@ body {
     line-height: 1.6;
     color: var(--dark-text);
     background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
@@ -70,6 +73,7 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .nav-menu a {
@@ -145,6 +149,7 @@ body {
 .intro {
     padding: 80px 20px;
     background: linear-gradient(to bottom, #ffffff, var(--light-bg));
+    flex: 1;
 }
 
 .intro h2 {
@@ -166,7 +171,7 @@ body {
 .content-section {
     padding: 80px 20px;
     background: linear-gradient(to bottom, #ffffff, var(--light-bg));
-    min-height: calc(100vh - 400px);
+    flex: 1;
 }
 
 .content-section h1 {
@@ -223,6 +228,7 @@ body {
 .topics {
     padding: 80px 20px;
     background: var(--light-bg);
+    flex: 1;
 }
 
 .topics h2 {
@@ -308,6 +314,7 @@ body {
 .checklist {
     padding: 80px 20px;
     background: white;
+    flex: 1;
 }
 
 .checklist h2 {
@@ -358,6 +365,7 @@ body {
 .resources {
     padding: 80px 20px;
     background: linear-gradient(to bottom, var(--light-bg), white);
+    flex: 1;
 }
 
 .resources h2 {
@@ -403,6 +411,7 @@ body {
 .tips {
     padding: 80px 20px;
     background: var(--light-bg);
+    flex: 1;
 }
 
 .tips h2 {
@@ -449,7 +458,7 @@ body {
 .contact {
     padding: 80px 20px;
     background: white;
-    min-height: calc(100vh - 400px);
+    flex: 1;
 }
 
 .contact h2 {
@@ -503,242 +512,39 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
-}
-
-.contact-form button {
-    width: 100%;
+    background-color: #f8f9fa;
 }
 
 .contact-info {
     max-width: 600px;
     margin: 0 auto;
-    background: linear-gradient(135deg, var(--secondary-color), #34495e);
-    color: white;
+    background: var(--light-bg);
     padding: 2rem;
     border-radius: var(--border-radius);
-    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info h3 {
+    color: var(--secondary-color);
     margin-bottom: 1.5rem;
-    font-size: 1.5rem;
 }
 
 .contact-info p {
-    margin: 0.5rem 0;
-    font-size: 1.1rem;
-}
-
-/* Highlights */
-.highlights {
-    padding: 80px 20px;
-    background: var(--light-bg);
-}
-
-.highlights h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: var(--secondary-color);
-}
-
-.highlights-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.highlight-card {
-    background: white;
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: var(--transition);
-    display: flex;
-    flex-direction: column;
-}
-
-.highlight-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.highlight-icon {
-    font-size: 3rem;
-    display: block;
     margin-bottom: 1rem;
-}
-
-.highlight-card h3 {
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-}
-
-.highlight-card p {
-    color: #7f8c8d;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-    flex-grow: 1;
-}
-
-/* Créditos - Seção unificada com content-section */
-.creditos-section {
-    padding: 80px 20px;
-    background: linear-gradient(to bottom, #ffffff, var(--light-bg));
-    min-height: calc(100vh - 400px);
-}
-
-.creditos-section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: var(--secondary-color);
-}
-
-.creditos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
-}
-
-.credito-card {
-    background: white;
-    padding: 2.5rem;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-    text-align: center;
-    border-top: 4px solid var(--primary-color);
-    overflow: hidden;
-}
-
-.credito-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.credito-photo {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 1.5rem;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid var(--primary-color);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--light-bg);
-}
-
-.credito-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.credito-card:hover .credito-photo img {
-    transform: scale(1.1);
-}
-
-.credito-card h3 {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 0.5rem;
-}
-
-.credito-role {
-    font-size: 1rem;
-    color: var(--primary-color);
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.credito-description {
-    color: #7f8c8d;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-    font-size: 0.95rem;
-}
-
-.credito-skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
-}
-
-.skill-badge {
-    display: inline-block;
-    background: var(--light-bg);
-    color: var(--secondary-color);
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    border: 1px solid var(--primary-color);
-}
-
-.agradecimentos-section {
-    background: linear-gradient(135deg, var(--secondary-color), #34495e);
-    color: white;
-    padding: 3rem;
-    border-radius: var(--border-radius);
-    margin-bottom: 3rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.agradecimentos-section h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
-.agradecimentos-section p {
-    font-size: 1.05rem;
+    color: #555;
     line-height: 1.8;
-    opacity: 0.95;
-}
-
-.sobre-projeto-section {
-    background: var(--light-bg);
-    padding: 3rem;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.sobre-projeto-section h3 {
-    font-size: 1.8rem;
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-}
-
-.sobre-projeto-section p {
-    color: #7f8c8d;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-.sobre-projeto-section p strong {
-    color: var(--secondary-color);
 }
 
 /* CTA Section */
 .cta-section {
     padding: 80px 20px;
     background: linear-gradient(135deg, var(--secondary-color), #34495e);
-    color: white;
+    color: var(--light-text);
     text-align: center;
 }
 
 .cta-section h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
@@ -755,12 +561,81 @@ body {
     flex-wrap: wrap;
 }
 
+/* Créditos */
+.creditos-section {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #ffffff, var(--light-bg));
+    flex: 1;
+}
+
+.creditos-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+}
+
+.creditos-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #7f8c8d;
+}
+
+.creditos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.credito-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.credito-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.credito-foto {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+}
+
+.credito-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.credito-card p {
+    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.credito-descricao {
+    color: #95a5a6;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+
 /* Footer */
 .footer {
-    background: linear-gradient(135deg, var(--secondary-color), #34495e);
+    background: var(--secondary-color);
     color: var(--light-text);
     padding: 3rem 20px 1rem;
-    margin-top: 5rem;
+    margin-top: auto;
 }
 
 .footer-content {
@@ -775,35 +650,41 @@ body {
     color: var(--primary-color);
 }
 
-.footer-section p,
-.footer-section li {
-    color: #ecf0f1;
+.footer-section p {
     line-height: 1.8;
+    opacity: 0.9;
 }
 
 .footer-section ul {
     list-style: none;
 }
 
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
 .footer-section a {
-    color: #ecf0f1;
+    color: var(--light-text);
     text-decoration: none;
     transition: var(--transition);
+    opacity: 0.9;
 }
 
 .footer-section a:hover {
     color: var(--primary-color);
+    opacity: 1;
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: #bdc3c7;
+    opacity: 0.8;
 }
 
 .footer-bottom p {
     margin: 0.5rem 0;
+    font-size: 0.9rem;
 }
 
 /* Responsivo */
@@ -818,36 +699,24 @@ body {
     }
 
     .hero-content p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
-    .intro h2,
+    .content-section h1,
     .topics h2,
-    .checklist h2,
     .resources h2,
+    .checklist h2,
     .tips h2,
     .contact h2,
-    .highlights h2,
-    .creditos-section h2,
-    .content-section h1 {
+    .cta-section h2,
+    .creditos-section h1 {
         font-size: 1.8rem;
     }
 
-    .stat-card,
-    .topic-card,
-    .resource-card,
-    .highlight-card,
-    .credito-card {
-        padding: 1.5rem;
-    }
-
-    .tips-list {
+    .topics-grid,
+    .resources-grid,
+    .creditos-grid {
         grid-template-columns: 1fr;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
     }
 
     .cta-buttons {
@@ -857,109 +726,30 @@ body {
     .cta-buttons .btn {
         width: 100%;
     }
-
-    .credito-card {
-        padding: 1.5rem;
-    }
-
-    .credito-photo {
-        width: 120px;
-        height: 120px;
-    }
-
-    .agradecimentos-section,
-    .sobre-projeto-section {
-        padding: 2rem;
-    }
-
-    .content-section {
-        padding: 60px 20px;
-    }
 }
 
 @media (max-width: 480px) {
     .nav-menu {
-        flex-direction: column;
         gap: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .nav-brand h1 {
+        font-size: 1.2rem;
     }
 
     .hero-content h2 {
         font-size: 1.5rem;
     }
 
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-
-    .stat-card h3 {
-        font-size: 1.8rem;
-    }
-
-    .creditos-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .credito-card h3 {
-        font-size: 1.3rem;
-    }
-
-    .credito-photo {
-        width: 100px;
-        height: 100px;
-    }
-
-    .agradecimentos-section h3,
-    .sobre-projeto-section h3,
-    .content-section h1 {
-        font-size: 1.3rem;
-    }
-
-    .content-section {
-        padding: 40px 20px;
-    }
-}
-
-/* Animações */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.topic-card,
-.stat-card,
-.resource-card,
-.tip,
-.highlight-card,
-.credito-card {
-    animation: fadeInUp 0.6s ease-out;
-}
-
-/* Scroll Animation */
-.topic-card:nth-child(1) { animation-delay: 0.1s; }
-.topic-card:nth-child(2) { animation-delay: 0.2s; }
-.topic-card:nth-child(3) { animation-delay: 0.3s; }
-.topic-card:nth-child(4) { animation-delay: 0.4s; }
-.topic-card:nth-child(5) { animation-delay: 0.5s; }
-.topic-card:nth-child(6) { animation-delay: 0.6s; }
-
-.credito-card:nth-child(1) { animation-delay: 0.1s; }
-.credito-card:nth-child(2) { animation-delay: 0.2s; }
-.credito-card:nth-child(3) { animation-delay: 0.3s; }
-
-/* Estilos adicionais para responsividade */
-@media (max-width: 1024px) {
-    .contact-wrapper {
-        grid-template-columns: 1fr;
+    .content-section h1,
+    .topics h2,
+    .resources h2,
+    .checklist h2,
+    .tips h2,
+    .contact h2,
+    .cta-section h2,
+    .creditos-section h1 {
+        font-size: 1.4rem;
     }
 }
