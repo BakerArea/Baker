@@ -586,6 +586,138 @@ body {
     flex-wrap: wrap;
 }
 
+/* Créditos - Estilos Novos */
+.creditos-section {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #ffffff, var(--light-bg));
+}
+
+.creditos-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+    color: #7f8c8d;
+}
+
+.creditos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.credito-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    text-align: center;
+    border-top: 4px solid var(--primary-color);
+}
+
+.credito-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.credito-avatar {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.credito-card h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.credito-role {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.credito-description {
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.credito-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.skill-badge {
+    display: inline-block;
+    background: var(--light-bg);
+    color: var(--secondary-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--primary-color);
+}
+
+.agradecimentos-section {
+    background: linear-gradient(135deg, var(--secondary-color), #34495e);
+    color: white;
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.agradecimentos-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.agradecimentos-section p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+.sobre-projeto-section {
+    background: var(--light-bg);
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-projeto-section h3 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.sobre-projeto-section p {
+    color: #7f8c8d;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.sobre-projeto-section p strong {
+    color: var(--secondary-color);
+}
+
 /* Footer */
 .footer {
     background: linear-gradient(135deg, var(--secondary-color), #34495e);
@@ -658,14 +790,16 @@ body {
     .resources h2,
     .tips h2,
     .contact h2,
-    .highlights h2 {
+    .highlights h2,
+    .creditos-section h2 {
         font-size: 1.8rem;
     }
 
     .stat-card,
     .topic-card,
     .resource-card,
-    .highlight-card {
+    .highlight-card,
+    .credito-card {
         padding: 1.5rem;
     }
 
@@ -684,6 +818,15 @@ body {
 
     .cta-buttons .btn {
         width: 100%;
+    }
+
+    .credito-card {
+        padding: 1.5rem;
+    }
+
+    .agradecimentos-section,
+    .sobre-projeto-section {
+        padding: 2rem;
     }
 }
 
@@ -709,6 +852,19 @@ body {
     .stat-card h3 {
         font-size: 1.8rem;
     }
+
+    .creditos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .credito-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .agradecimentos-section h3,
+    .sobre-projeto-section h3 {
+        font-size: 1.3rem;
+    }
 }
 
 /* Animações */
@@ -727,7 +883,8 @@ body {
 .stat-card,
 .resource-card,
 .tip,
-.highlight-card {
+.highlight-card,
+.credito-card {
     animation: fadeInUp 0.6s ease-out;
 }
 
@@ -738,6 +895,10 @@ body {
 .topic-card:nth-child(4) { animation-delay: 0.4s; }
 .topic-card:nth-child(5) { animation-delay: 0.5s; }
 .topic-card:nth-child(6) { animation-delay: 0.6s; }
+
+.credito-card:nth-child(1) { animation-delay: 0.1s; }
+.credito-card:nth-child(2) { animation-delay: 0.2s; }
+.credito-card:nth-child(3) { animation-delay: 0.3s; }
 
 /* Estilos adicionais para responsividade */
 @media (max-width: 1024px) {
