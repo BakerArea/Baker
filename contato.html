@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em Contato - Dúvidas, Denúncias e Sugestões sobre Segurança no Trabalho">
+    <title>Contato | Baker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%23d4a574'>🏗️</text></svg>">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo-icon">🏗️</span>
+                <h1>Baker</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="seguranca.html">Segurança</a></li>
+                <li><a href="topicos.html">Tópicos</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Entre em Contato</h2>
+            <p>Dúvidas, Sugestões e Denúncias de Segurança</p>
+        </div>
+    </section>
+
+    <!-- Conteúdo Principal -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-intro">
+                <h1>Fale Conosco</h1>
+                <p>Tem dúvidas sobre segurança no trabalho? Quer reportar um risco? Envie uma mensagem para nossa equipe. Todos os formulários são tratados com confidencialidade e seriedade.</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <!-- Coluna de Contato -->
+                <div class="contact-info">
+                    <h2>Informações de Contato</h2>
+                    
+                    <div class="info-item">
+                        <span class="info-icon">📧</span>
+                        <div class="info-text">
+                            <h3>Email</h3>
+                            <p>contato@baker-seguranca.com</p>
+                            <p class="small">Responderemos dentro de 24 horas</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">📱</span>
+                        <div class="info-text">
+                            <h3>Telefone</h3>
+                            <p>(11) 3000-0000</p>
+                            <p class="small">Segunda a Sexta, 8h às 17h</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">📍</span>
+                        <div class="info-text">
+                            <h3>Localização</h3>
+                            <p>São Paulo - SP</p>
+                            <p class="small">Atendimento também online</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">🕐</span>
+                        <div class="info-text">
+                            <h3>Horário de Atendimento</h3>
+                            <p>Segunda a Sexta: 8h às 18h</p>
+                            <p class="small">Feriados: Atendimento limitado</p>
+                        </div>
+                    </div>
+
+                    <div class="info-emergency">
+                        <h3>🚨 Emergência?</h3>
+                        <p>Para situações de emergência, ligue:</p>
+                        <div class="emergency-numbers">
+                            <div><strong>SAMU:</strong> 192</div>
+                            <div><strong>Bombeiros:</strong> 193</div>
+                            <div><strong>Polícia:</strong> 190</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário de Contato -->
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-form" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Nome *</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                placeholder="Seu nome completo" 
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="seu@email.com" 
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                placeholder="(11) 9999-9999"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Empresa/Local de Trabalho</label>
+                            <input 
+                                type="text" 
+                                id="company" 
+                                name="company" 
+                                placeholder="Nome da empresa ou setor"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Assunto *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecione um assunto</option>
+                                <option value="duvida">Dúvida sobre Segurança</option>
+                                <option value="risco">Reportar Risco/Perigo</option>
+                                <option value="acidente">Relatar Acidente</option>
+                                <option value="denuncia">Denúncia de Irregularidade</option>
+                                <option value="sugestao">Sugestão de Conteúdo</option>
+                                <option value="informacao">Solicitar Informação</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensagem *</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                placeholder="Descreva seu assunto em detalhes..." 
+                                rows="8"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div class="form-group checkbox">
+                            <input 
+                                type="checkbox" 
+                                id="anonymous" 
+                                name="anonymous"
+                            >
+                            <label for="anonymous">Enviar anonimamente</label>
+                        </div>
+
+                        <div class="form-group checkbox">
+                            <input 
+                                type="checkbox" 
+                                id="privacy" 
+                                name="privacy" 
+                                required
+                            >
+                            <label for="privacy">Concordo com a Política de Privacidade *</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">Enviar Mensagem</button>
+                    </form>
+
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <h3>✅ Mensagem Enviada com Sucesso!</h3>
+                        <p>Obrigado pelo contato. Responderemos em breve.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tipos de Contato -->
+    <section class="contact-types">
+        <div class="container">
+            <h2>Como Posso Ajudar?</h2>
+            <p class="intro-text">Escolha a categoria que melhor se adequa à sua necessidade:</p>
+
+            <div class="contact-types-grid">
+                <div class="contact-type-card">
+                    <span class="type-icon">❓</span>
+                    <h3>Dúvidas</h3>
+                    <p>Tem perguntas sobre segurança no trabalho, normas ou procedimentos? Estamos aqui para ajudar.</p>
+                    <a href="#contactForm" class="btn btn-secondary">Fazer Pergunta</a>
+                </div>
+
+                <div class="contact-type-card">
+                    <span class="type-icon">⚠️</span>
+                    <h3>Reportar Risco</h3>
+                    <p>Identificou uma situação de risco ou perigo no seu ambiente? Comunique para que possamos tomar ações.</p>
+                    <a href="#contactForm" class="btn btn-secondary">Reportar</a>
+                </div>
+
+                <div class="contact-type-card">
+                    <span class="type-icon">🚨</span>
+                    <h3>Acidente</h3>
+                    <p>Testemunhou ou sofreu um acidente? Reporte os detalhes para investigação e prevenção de futuros casos.</p>
+                    <a href="#contactForm" class="btn btn-secondary">Reportar Acidente</a>
+                </div>
+
+                <div class="contact-type-card">
+                    <span class="type-icon">🔍</span>
+                    <h3>Denúncia</h3>
+                    <p>Descobriu uma violação das normas de segurança? Sua denúncia é importante e confidencial.</p>
+                    <a href="#contactForm" class="btn btn-secondary">Denunciar</a>
+                </div>
+
+                <div class="contact-type-card">
+                    <span class="type-icon">💡</span>
+                    <h3>Sugestão</h3>
+                    <p>Tem uma sugestão de conteúdo ou melhorias? Adoraríamos ouvir suas ideias.</p>
+                    <a href="#contactForm" class="btn btn-secondary">Sugerir</a>
+                </div>
+
+                <div class="contact-type-card">
+                    <span class="type-icon">📚</span>
+                    <h3>Mais Informação</h3>
+                    <p>Quer aprofundar em um tópico específico? Solicite materiais e informações adicionais.</p>
+                    <a href="#contactForm" class="btn btn-secondary">Solicitar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Política de Privacidade -->
+    <section class="privacy-section">
+        <div class="container">
+            <h2>Privacidade e Confidencialidade</h2>
+            <div class="privacy-content">
+                <p>Levamos a privacidade e confidencialidade muito a sério:</p>
+                <ul>
+                    <li>✅ Todos os dados são criptografados e seguros</li>
+                    <li>✅ Não compartilhamos informações com terceiros sem consentimento</li>
+                    <li>✅ Você pode optar por enviar anonimamente</li>
+                    <li>✅ Atendemos à Lei Geral de Proteção de Dados (LGPD)</li>
+                    <li>✅ Suas informações serão usadas apenas para responder sua mensagem</li>
+                    <li>✅ Você pode solicitar remoção de dados a qualquer momento</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Baker</h4>
+                    <p>Segurança no Trabalho é Responsabilidade de Todos</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="index.html">Sobre</a></li>
+                        <li><a href="topicos.html">Tópicos</a></li>
+                        <li><a href="recursos.html">Recursos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legislação</h4>
+                    <ul>
+                        <li><a href="https://www.gov.br/trabalho" target="_blank">Ministério do Trabalho</a></li>
+                        <li><a href="https://www.camara.leg.br" target="_blank">Câmara dos Deputados</a></li>
+                        <li><a href="https://www.tst.jus.br" target="_blank">TST - Tribunal Superior</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Baker - Segurança no Trabalho. Todos os direitos reservados.</p>
+                <p>Desenvolvido com ❤️ para ambientes mais seguros</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .contact-content {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .contact-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .contact-intro h1 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-intro p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-info h2 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .info-item:hover {
+            background: #ecf0f1;
+            transform: translateX(5px);
+        }
+
+        .info-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .info-text h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .info-text p {
+            color: #555;
+            margin: 0.25rem 0;
+            line-height: 1.5;
+        }
+
+        .info-text .small {
+            font-size: 0.9rem;
+            color: #95a5a6;
+        }
+
+        .info-emergency {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        .info-emergency h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .info-emergency p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1rem;
+        }
+
+        .emergency-numbers {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .emergency-numbers div {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 0.75rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .contact-form-wrapper {
+            position: relative;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #ecf0f1;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: #f8f9fa;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background: white;
+            box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+        }
+
+        .form-group.checkbox {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group.checkbox input {
+            width: auto;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .form-group.checkbox label {
+            margin: 0;
+            cursor: pointer;
+            font-weight: 400;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .success-message {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .success-message h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .success-message p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .contact-types {
+            padding: 80px 20px;
+            background: var(--light-bg);
+        }
+
+        .contact-types h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-types .intro-text {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .contact-types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-type-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-type-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .type-icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .contact-type-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .contact-type-card p {
+            color: #7f8c8d;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+
+        .privacy-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .privacy-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+        }
+
+        .privacy-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .privacy-content p {
+            color: #555;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .privacy-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .privacy-content li {
+            padding: 0.75rem 0;
+            color: #555;
+            line-height: 1.8;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .privacy-content li:last-child {
+            border-bottom: none;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-intro h1 {
+                font-size: 1.8rem;
+            }
+
+            .contact-types h2 {
+                font-size: 2rem;
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Validar formulário
+            const form = document.getElementById('contactForm');
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            const privacy = document.getElementById('privacy').checked;
+
+            if (!name || !email || !subject || !message) {
+                alert('Por favor, preencha todos os campos obrigatórios!');
+                return;
+            }
+
+            if (!privacy) {
+                alert('Você precisa aceitar a Política de Privacidade!');
+                return;
+            }
+
+            // Simular envio
+            console.log('Formulário enviado:', {
+                name,
+                email,
+                subject,
+                message
+            });
+
+            // Mostrar mensagem de sucesso
+            form.style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+
+            // Limpar formulário após 3 segundos
+            setTimeout(() => {
+                form.reset();
+                form.style.display = 'block';
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
