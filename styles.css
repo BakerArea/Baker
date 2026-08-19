@@ -162,6 +162,29 @@ body {
     line-height: 1.8;
 }
 
+/* Content Section - Para todas as páginas de conteúdo */
+.content-section {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #ffffff, var(--light-bg));
+    min-height: calc(100vh - 400px);
+}
+
+.content-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+    color: #7f8c8d;
+}
+
 /* Stats */
 .stats {
     display: grid;
@@ -426,6 +449,7 @@ body {
 .contact {
     padding: 80px 20px;
     background: white;
+    min-height: calc(100vh - 400px);
 }
 
 .contact h2 {
@@ -560,10 +584,11 @@ body {
     flex-grow: 1;
 }
 
-/* Créditos - Estilos Novos */
+/* Créditos - Seção unificada com content-section */
 .creditos-section {
     padding: 80px 20px;
     background: linear-gradient(to bottom, #ffffff, var(--light-bg));
+    min-height: calc(100vh - 400px);
 }
 
 .creditos-section h2 {
@@ -571,15 +596,6 @@ body {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: var(--secondary-color);
-}
-
-.intro-text {
-    text-align: center;
-    font-size: 1.1rem;
-    max-width: 700px;
-    margin: 0 auto 3rem;
-    line-height: 1.8;
-    color: #7f8c8d;
 }
 
 .creditos-grid {
@@ -713,6 +729,32 @@ body {
     color: var(--secondary-color);
 }
 
+/* CTA Section */
+.cta-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--secondary-color), #34495e);
+    color: white;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 /* Footer */
 .footer {
     background: linear-gradient(135deg, var(--secondary-color), #34495e);
@@ -786,7 +828,8 @@ body {
     .tips h2,
     .contact h2,
     .highlights h2,
-    .creditos-section h2 {
+    .creditos-section h2,
+    .content-section h1 {
         font-size: 1.8rem;
     }
 
@@ -828,6 +871,10 @@ body {
     .sobre-projeto-section {
         padding: 2rem;
     }
+
+    .content-section {
+        padding: 60px 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -867,8 +914,13 @@ body {
     }
 
     .agradecimentos-section h3,
-    .sobre-projeto-section h3 {
+    .sobre-projeto-section h3,
+    .content-section h1 {
         font-size: 1.3rem;
+    }
+
+    .content-section {
+        padding: 40px 20px;
     }
 }
 
