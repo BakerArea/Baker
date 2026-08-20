@@ -269,13 +269,15 @@ function loadResource(url, type = 'script') {
     });
 }
 
-// Inicialização
+// Inicialização: usar classe CSS para controlar animação das seções de forma consistente
 document.addEventListener('DOMContentLoaded', () => {
     console.log('✓ Página de Segurança no Trabalho carregada com sucesso');
     
-    // Executar animações iniciais
+    // Aplicar classe que inicializa a animação (CSS define opacity:0 e a animação)
     document.querySelectorAll('section').forEach((section, index) => {
-        section.style.opacity = '0';
-        section.style.animation = `fadeInUp 0.8s ease-out ${index * 0.2}s forwards`;
+        // adicionar classe que contém a animação
+        section.classList.add('fade-in-up');
+        // definir delay por seção para manter o efeito sequencial
+        section.style.animationDelay = `${index * 0.2}s`;
     });
 });
